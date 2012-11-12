@@ -1,0 +1,11 @@
+// Show the form in a colorbox
+var form = '<%= escape_javascript ( render partial: "main/contact_form" ) %>';
+
+$.colorbox({
+  html: form,
+  href: "#",
+  iframe: false,// CANT USE IFRAME
+  innerWidth: 600,
+  innerHeight: 600,
+  close: "",
+});

@@ -1,0 +1,38 @@
+<div id="contact_form" class="open_message">
+<div class="modal hide" id="myModal">
+  <div class="modal-header">
+    <button type="button" class="close" onclick="$.colorbox.close(); return false;" data-dismiss="modal">×</button>
+    <h3>Contact Us</h3>
+  </div>
+  <div class="modal-body">
+    <%= form_tag(site_thanks_path, :method => :post) do %>
+
+		<div id="new_message_action">
+
+	      <% if current_user %>
+	        <%= hidden_field_tag "name", current_user.full_name %>
+	        <%= hidden_field_tag "email", current_user.email %>
+	        <p>Your message will be sent to us with the reply address:</p>
+						<p><strong><%= current_user.email%></strong></p>
+						<p>For all account questions please file a <%= link_to "Support Ticket", account_tickets_path(current_user) %>.</p>
+	      <% else %>
+	        <%= label :name_label, "Your name:" %>
+					<%= text_field_tag :name, '', size: 64, class: "name" %>
+
+	        <%= label :email_label, "Your email:" %>
+					<%= text_field_tag :email, '', size: 64, class: "email" %>
+	      <% end %>
+
+				<%= label :messsage_label, "Message:" %>
+	      <%= text_area_tag :message %>
+
+			</div>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn" onclick="$.colorbox.close(); return false;" data-dismiss="modal">Close</a>
+    <%= submit_tag "Send", id:"message_submit", class: "btn btn-primary"%>
+  </div>
+<% end %>
+</div>
+
+</div>

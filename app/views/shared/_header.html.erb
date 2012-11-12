@@ -1,0 +1,36 @@
+<% content_for :javascript do %>
+
+$(document).ready(function(){
+   $("a.nav1").click(function () {
+      // switch all tabs off
+      $(".active").removeClass("active");
+      // switch this tab on
+      $(this).addClass("active");
+   });
+});
+
+<% end %>
+
+<div id="header">
+		<div id="logo_container">
+			<%= link_to image_tag("/assets/header_logo.png"), root_path %>
+		</div>
+		
+		<nav>
+			
+			<li><%= link_to "About Portray", about_path, class: "nav1" %></li>
+			<li><%= link_to "Our Partner", partner_path, class: "nav1" %></li>
+			<li><%= link_to "Advertising Solutions", ads_path, class: "nav1" %></li>
+			<li id="last"><%= link_to "Cafeteria Solutions", cafs_path, class: "nav1" %></li>	
+			
+		</nav>
+		
+			<div id="contact_us">
+				<p><%= link_to "Contact Us", site_contact_path, remote: true %></p>
+			</div>
+
+</div>
+
+
+	
+	
