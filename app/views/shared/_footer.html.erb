@@ -1,14 +1,27 @@
 
 <div id="footer">
-	<div id="logos">
-		<%= link_to image_tag("/assets/footer_logo.png"), root_path %>
-	</div>
-	<ul id="footer_links">
+	<div id="wrap">
+	<ul id="footer_nav">
 		<li><%= link_to "About Us", about_path %></li>
-		<li>Contact</li>
-		<li>LinkedIn</li>
-		<li>Twitter</li>
-		<li>Facebook</li>
+		<li><%= link_to "Our Partner", partner_path %></li>
+		<li><%= link_to "Advertising Solutions", ads_path %></li>
+		<li id="last"><%= link_to "Cafeteria Solutions", cafs_path %></li>
 	</ul>
-	<p id="copyright">© 2012-2013 Portray Advertising Inc. All rights reserved.</p>
+	
+	<ul id ="follow_buttons">
+		<li><a href="https://twitter.com/PortrayAds" class="twitter-follow-button" data-show-count="false">Follow @PortrayAds</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</li>
+		<li>
+		</li>
+	</ul>
+
+	</div>
+</div>
+
+<div id="sub_footer">
+<p id="copyright">© 2012-2013 Portray Advertising Inc. All rights reserved.
+</p>
+
+<%= link_to image_tag("/assets/footer_logo_30h.png"), root_path, id: "footer_logo" %>
 </div>
