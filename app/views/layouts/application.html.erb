@@ -3,27 +3,57 @@
 <head>
   <title>Portray Advertising</title>
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-  <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= stylesheet_link_tag "main", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <%= csrf_meta_tags %>
+	
+	<!-- Assets -->
+	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%= stylesheet_link_tag    "main.css", :media => "all" %>
+		
+	  <%= javascript_include_tag "application" %>
 
-	<% content_for :javascript do %>
+		<link href="/assets/jquery.bxslider.css" rel="stylesheet" />
 
-	$(document).ready ( function(){
-	    if (!$('.navigation li a').removeClass('highlight').filter(function() {
-	            return window.location.pathname.indexOf(this.href) === 0;
-	        }).addClass('highlight').end().filter('.highlight').length) {
-	        $('#home').addClass('highlight'); // make the home link active as a default
-	    }
-	});
+	  <%= csrf_meta_tags %>
+	  <%= csrf_meta_tags %>
+	<!-- end Assets -->
 
-	<% end %>
+	<!-- Meta -->
 
-	<script type="text/javascript">var switchTo5x=true;</script>
-	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-	<script type="text/javascript">stLight.options({publisher: "e03a96b6-9381-4bf1-b222-4bf9e2977573"});</script>
+	<meta name="description" content="">
+
+	<meta name="keywords" content="">
+
+	<!-- end Meta -->
+
+	<!-- Javascripts -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script src="/assets/jquery.bxslider.min.js"></script>
+		<script type="text/javascript">var switchTo5x=true;</script>
+		<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+		<script type="text/javascript">stLight.options({publisher: "e03a96b6-9381-4bf1-b222-4bf9e2977573"});</script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+			  $('.bxslider').bxSlider({
+		 		 pagerCustom: '#pager',
+		 		 adaptiveHeight: true,
+		 		 controls: true,
+		 		 auto: true,
+		 		 pause: 4000
+		    	});
+
+				$(function() {
+				   $("#pager a").click(function() {
+				      // remove classes from all
+				      $("#pager a").removeClass("active");
+				      // add class to the one we clicked
+				      $(this).addClass("active");
+				   });
+				});
+
+			});
+
+		</script>
+	<!-- End JS -->
 
 </head>
 <body>
