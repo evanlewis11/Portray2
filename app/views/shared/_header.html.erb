@@ -1,21 +1,22 @@
 <div id="header">
+	<div class="main-wrap">
 		<div id="logo_container">
-			<%= link_to image_tag("/assets/header_logo.png"), root_path %>
+			<%= link_to image_tag("/assets/portray_small_logo.png"), root_path %>
 		</div>
 		
 		<nav class="navigation">
 			
 			<li><%= link_to "About Us", about_path %></li>
 			<li><%= link_to "Our Partner", partner_path %></li>
-			<li><%= link_to "Advertising Solutions", ads_path %></li>
-			<li id="last"><%= link_to "Cafeteria Solutions", cafs_path %></li>	
-			
+			<li><%= link_to "Advertising", ads_path %></li>
+			<li><%= link_to "Cafeteria Solutions", cafs_path %></li>
+			<li id="last">
+				<div id="contact_us">
+					<p><a href="mailto:contact@portrayadvertising.com">Contact</a></p>
+				</div>
+			</li>	
 		</nav>
-		
-		<div id="contact_us">
-			<p><a href="mailto:contact@portrayadvertising.com">Contact Us</a></p>
-		</div>
-
+	</div>
 </div>
 
 
