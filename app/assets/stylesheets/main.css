@@ -1,5 +1,6 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;}
+  font-family: Arial, Helvetica, sans-serif;
+	background: url('patterns/p6.png') 0 0 repeat;}
 
 .main-wrap {
 	width:1000px;
@@ -9,25 +10,45 @@ body {
 
 /*Bootstrap*/
 
+#pre-header {
+	height:28px;
+	width:100%;
+	text-align:center;
+	background-color:#fa2500;
+}
+
+#pre-header p {
+	display:block;
+	width:195px;
+	line-height:22px;
+	padding-top:4px;
+	color:white;
+	font-size:22px;
+	font-weight:900;
+	font-family: Arial;
+	margin:0 auto;
+	background: url(phone.png) left center no-repeat;
+}
 
 #header {
   width: 100%;
   height: 80px;
+	padding:5px 0;
   min-width: 1000px;
   position: relative;
-	background-color: #f0f0f0;
-	background: -webkit-linear-gradient(top, #fff 0%, #f9f9f9 49%, #f2f2f2 51%, #f0f0f0 100%);
-	background: -moz-linear-gradient(top, #fff 0%, #f9f9f9 50%, #f2f2f2 50.1%, #f0f0f0 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff0f0f0', GradientType=0);}
+	background-color: white;
+	z-index: 999;
+	-webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.75);}
 
   #header #logo_container {
     float:left;
 		margin-top:10px;}
 
   #header nav {
-    position: absolute;
-    top: 20%;
-    right: 10%; }
+		margin-top:33px;
+ 		float:right;}
 
     #header nav li {
       list-style: none;
@@ -35,7 +56,7 @@ body {
       padding: 0px 12px;
       font-color: #1A1A1A;
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 500;
       text-transform: uppercase; }
 
       #header nav li a {
@@ -48,31 +69,6 @@ body {
 				
       #header nav li a:active {
         color: red; }
-
-    #header nav li#last {
-			margin-left:200px;
-      border-right: none;
-      padding-right: none; }
-
-  #header #contact_us {
-    position: absolute;
-    bottom: 10%;
-    right: 2.5%;
-    width: 181px;
-    height: 50px;
-    background: red;
-    border-radius: 6px; }
-
-    #header #contact_us p {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 14px;
-      text-transform: uppercase; }
-
-      #header #contact_us p a {
-        color: white;
-        text-decoration: none;
-				cursor:pointer;}
 
 .highlight {
 	color:#7F0B09;
@@ -103,7 +99,8 @@ body {
   width: 100%;
   height: 370px;
   color: black;
-  min-width: 1000px; }
+  min-width: 1000px;
+	background: url('patterns/fabric_of_squares_gray.png') 0 0 repeat;}
   #tri h3 {
     width: 100%;
     text-align: center;
@@ -144,6 +141,10 @@ body {
       font-size: 13px;
       line-height: 18px; }
 
+#tri .triblock li {
+	list-style-type:none;
+}
+
 .side-lined::before {
   left: 80px; }
 
@@ -162,7 +163,7 @@ body {
 #opener_about_us {
   width: 100%;
   height: 248px;
-  background-color: white;
+  background-color: black;
   background-image: url(black_tray_wide.png);
   background-position: center;
   background-repeat: no-repeat; }
@@ -170,7 +171,7 @@ body {
 #opener_our_partner {
   width: 100%;
   height: 248px;
-  background-color: white;
+  background-color: black;
   background-image: url(kids_wide.jpeg);
   background-position: center;
   background-repeat: no-repeat; }
@@ -178,7 +179,7 @@ body {
 #opener_ad_solutions {
   width: 100%;
   height: 248px;
-  background-color: white;
+  background-color: black;
   background-image: url(dundas_wide.JPG);
   background-position: center;
   background-repeat: no-repeat; }
@@ -186,14 +187,17 @@ body {
 #opener_caf_solutions {
   width: 100%;
   height: 248px;
-  background-color: white;
+  background-color: black;
   background-image: url(food_wide.jpeg);
   background-position: center;
   background-repeat: no-repeat; }
 
 #middle_content {
-  width: 1000px;
-  margin: 0 auto;}
+  width: 960px;
+  margin: 0 auto;
+	background:rgba(255,255,255,0.8);
+	box-shadow:0 2px 2px #666;
+	padding:0 20px 2px 20px;}
   #middle_content p.text {
 		float:left;
     margin: 10px 0px;
@@ -215,6 +219,8 @@ body {
     line-height: 23px;
     font-style: italic; }
 
+
+
 ul#benefits {
 	clear:left;
 	list-style-type: square;
@@ -234,16 +240,19 @@ p#learn_more {
 	padding-bottom:30px;
 }
 
-h2 {
-  font-size: 24px;
-  border-bottom: 1px solid black;
-  margin-top: 25px;
-  padding-bottom: 10px;
-  margin-bottom: 10px; }
+
+h2.title {
+  font-size: 30px;
+  padding:20px 10px 15px 10px;
+  margin-bottom: 10px;
+	margin-top:-65px;
+	background:rgba(255,255,255,0.02);
+	text-shadow:0 1px 1px #f4f4f4;
+	}
 
 .icon_right {
 	float:right;
-	margin-top:-6px;
+	margin-top:0;
 }
 
 h3.testimonials {
@@ -256,11 +265,28 @@ h3.testimonials {
 	border-bottom: 4px double #E0E0E0;
 }
 
-#framed {
+.framed {
 	border: 8px solid white;
 	-webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15);
 	-moz-box-shadow: 0 1px 3px 1px rgba(0,0,0,0.15);
 	box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+}
+
+.framed-first {
+	margin-left:7.5%;
+}
+
+.framed-second {
+	margin-left:5%;
+}
+
+.cta {
+	clear:both;
+	width:100%;
+	height:40px;
+	padding:10px 0;
+	margin:10px 0;
+	text-align:center;
 }
 
 p.testimonial {
@@ -286,16 +312,13 @@ span.where_from {
 	}
 	
 	#footer {
-		margin-top:10px;
 	  padding: 15px 0px;
 	  position: relative;
-	  background-color: #f0f0f0;
-		border-top:1px solid #f0f0f0;
-		background: -webkit-linear-gradient(top, #f2f2f2 51%, #f0f0f0 100%);
-		background: -moz-linear-gradient(top, #f2f2f2 50.1%, #f0f0f0 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff2f2f2', endColorstr='#fff0f0f0', GradientType=0);
 	  width: 100%;
-	  min-width: 1000px; }
+	  min-width: 1000px;
+	 	background-color:#f0f0f0;
+		border-top:1px solid #f4f4f4;
+		border-bottom:2px solid #fa2500;}
 	
 	  #footer #logos {
 	    width: 720px;
@@ -347,7 +370,7 @@ span.where_from {
 		width: 300px;
 	}
 	.bxslider li {
-		height:185px;
+		height:auto;
 	}
 	.quote span {
 		float:right;
