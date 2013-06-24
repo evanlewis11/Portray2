@@ -17,6 +17,7 @@ class MainController < ApplicationController
   
   
   def home
+    render layout: "home"
   end
   
   def thanks

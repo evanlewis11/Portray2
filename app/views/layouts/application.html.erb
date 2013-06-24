@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Portray Advertising</title>
+  <title>Portray Advertising - The World's Smartest Food Trays</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Assets -->
+	<%= stylesheet_link_tag 'main.css', :media => 'screen, projection' %>
+	<%= stylesheet_link_tag 'bootstrap.css', :media => 'screen, projection' %>
+	<%= stylesheet_link_tag 'responsive.css', :media => 'screen, projection' %>
+	<%= stylesheet_link_tag 'style.css', :media => 'screen, projection' %>
+	<%= stylesheet_link_tag 'camera.css', :media => 'screen, projection' %>
+	<%= stylesheet_link_tag 'portfolio.css', :media => 'screen, projection' %>
+	<%= stylesheet_link_tag 'elements.css', :media => 'screen, projection' %>
+	<%= javascript_include_tag "application" %>
 	
-	<!-- Assets -->
-	  <%= stylesheet_link_tag    "application", :media => "all" %>
-	  <%= stylesheet_link_tag    "main", :media => "all" %>
-	
-		<%= stylesheet_link_tag    "jquery.fancybox", :media => "all" %>
-		<%#= stylesheet_link_tag    "bootstrap", :media => "all" %>
-		<%#= stylesheet_link_tag    "bootstrap.min", :media => "all" %>
-		<%#= stylesheet_link_tag    "bootstrap-responsive", :media => "all" %>
-		<%#= stylesheet_link_tag    "bootstrap-responsive.min", :media => "all" %>
-		
-		
-	  <%= javascript_include_tag "application" %>
-		<%= javascript_include_tag    "jquery.fancybox", :media => "all" %>
-
-		<link href="/assets/jquery.bxslider.css" rel="stylesheet" />
-
-	  <%= csrf_meta_tags %>
-	  <%= csrf_meta_tags %>
-	<!-- end Assets -->
+	<link href="/assets/jquery.bxslider.css" rel="stylesheet" />
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900,400italic' rel='stylesheet' type='text/css'>			
+		<!-- end Assets -->
 	
 	<%= favicon_link_tag 'portray_p.ico' %>
 
@@ -34,15 +29,17 @@
 	<!-- end Meta -->
 
 	<!-- Javascripts -->
+
+		<script type="text/javascript">var switchTo5x=true;</script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 		<script src="/assets/jquery.bxslider.min.js"></script>
-		<script type="text/javascript">var switchTo5x=true;</script>
 		<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 		<script type="text/javascript">stLight.options({publisher: "e03a96b6-9381-4bf1-b222-4bf9e2977573", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+		
 		<script type="text/javascript">
 			$(document).ready(function(){
 
-			  $('.bxslider').bxSlider({
+			  $('ul.bxslider').bxSlider({
 		 		 pagerCustom: '#pager',
 		 		 adaptiveHeight: true,
 		 		 controls: true,
@@ -58,22 +55,38 @@
 				      $(this).addClass("active");
 				   });
 				});
+				
+				 $('.dropdown_toggle').click(function(e) {
+				  	if ($(this).parent().is('.clicked')) {
+				  		$('.dropdown_toggle').removeClass('clicked');
+				  		$('.dropdown_menu').fadeOut('fast');
+				  	}
+				  	else
+				  	{
+				  		$(this).parent().find('.dropdown_menu').fadeIn('fast', function() {
+				  			$(this).addClass('opened');
+				  		});
+
+				  		// This stops the click event from bubbling up the DOM tree
+				  		e.stopPropagation();
+				  	}
+				  });
+
+				  $('body').click(function() {
+				  	$('.dropdown_menu').fadeOut('fast', function() {
+				  		$(this).removeClass('opened');
+				  	});
+				  });
 
 			});
 
 		</script>
+		
 	<!-- End JS -->
 
 </head>
 <body>
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=335273373225284";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+
 	<div id="container">
 		<header>
 		<%= render "shared/header" %>
@@ -83,6 +96,6 @@
 	
 	</div>
 		<%= render "shared/footer" %>
-	
+
 </body>
 </html>
