@@ -15,6 +15,9 @@ class MainController < ApplicationController
   def cafeteria_solutions
   end
   
+  def landing
+    render layout: "splash"
+  end
   
   def home
     render layout: "home"
