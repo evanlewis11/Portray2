@@ -8,11 +8,14 @@
           <div class="clearfix p1">
             <p class="text-info"><i>Lorem ipsum dolor sit amet, consectetuer adipiscing, sed diam nonummy nibh eui.</i></p>
             Lorem ipsum dolor sit amet, consectetuerad ipiscing elit, sed diam nonummy nibh euisod dolore magna aliquam erat volutpatorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinc. </div>
-          <ul id="social" class="tooltip-demo">
-            <li><a rel="tooltip" title="Twitter" href="#"><img alt="Twitter" src="/assets/social_icons/twitter.png"></a></li>
-            <li><a rel="tooltip" title="Facebook" href="#"><img alt="Facebook" src="/assets/social_icons/facebook.png"></a></li>
-						<li style="line-height:30px;"><i class="icon-phone"></i>&nbsp; 1-647-982-9594</li>
+          <ul id="social">
+            <li><a title="Twitter" href="#"><img alt="Twitter" src="/assets/social_icons/twitter.png"></a></li>
+            <li><a title="Facebook" href="#"><img alt="Facebook" src="/assets/social_icons/facebook.png"></a></li>
           </ul>
+					<ul id="call-to">
+						<li><a href="mailto:info@portrayadvertising.com">info@portrayadvertising.com</a></li>
+						<li>1-647-982-9594</li>
+					</ul>
         </div>
         <!-- links -->
         <div class="span4">
@@ -22,9 +25,21 @@
         <div class="span4 right-footer-block">
 					<%= link_to image_tag("/assets/footer_logo.png"), root_path %>	
           <ul class="list" style="padding:25px 5px 0;">
+				 	<% unless current_page?(about_path) %>
+				 		 <li><%= link_to "About Us", about_path %></li>
+				 	<% end %>
+					<% unless current_page?(partner_path) %>
 							<li><%= link_to "Our Partner", partner_path %></li>
+					<% end %>
+					<% unless current_page?(ads_path) %>
 							<li><%= link_to "Advertising Solutions", ads_path %></li>
+					<% end %>
+					<% unless current_page?(cafs_path) %>
 							<li><%= link_to "Cafeteria Solutions", cafs_path %></li>
+					<% end %>
+					<% unless current_page?(contact_path) %>
+							<li><%= link_to "Contact", contact_path %></li>
+					<% end %>
           </ul>
         </div>
       </div>

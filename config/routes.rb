@@ -8,9 +8,9 @@ get "/advertising_solutions", :controller => "main", :action => :advertising_sol
 
 get "/cafeteria_solutions", :controller => "main", :action => :cafeteria_solutions, :as => :cafs
 
-get "/", :controller => "main", :action => :landing, :as => :root
+get "/", :controller => "main", :action => :home, :as => :root
 
-match "/contact" => "main#contact", as: "site_contact"
+get "/contact" => "main#contact", :action => :home, :as => :contact
 
 get "/thanks", :controller => "main", :action => :thanks, :as => :site_thanks
 
