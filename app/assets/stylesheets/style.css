@@ -582,6 +582,8 @@ float:right; }
 /*social icons*/
 ul#social { list-style: none outside none; margin: 10px 0 0; display:inline;}
 
+ul#call-to { list-style:none; }
+
 #social a { display: block; float: left; height: 32px; margin: 0 9px 9px 0; width: 32px; }
 
 #social a img { border: medium none; }
