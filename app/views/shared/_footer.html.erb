@@ -6,8 +6,8 @@
         <div class="span4 left-footer-block">
           <h2>About Portray</h2>
           <div class="clearfix p1">
-            <p class="text-info"><i>Lorem ipsum dolor sit amet, consectetuer adipiscing, sed diam nonummy nibh eui.</i></p>
-            Lorem ipsum dolor sit amet, consectetuerad ipiscing elit, sed diam nonummy nibh euisod dolore magna aliquam erat volutpatorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinc. </div>
+            <p class="text-info">Portray Advertising provides a unique advertisement platform in cafeterias and food courts. We reach millions of students and consumers for roughly 23 minutes each interaction.</p>
+					</div>
           <ul id="social">
             <li><a title="Twitter" href="#"><img alt="Twitter" src="/assets/social_icons/twitter.png"></a></li>
             <li><a title="Facebook" href="#"><img alt="Facebook" src="/assets/social_icons/facebook.png"></a></li>
@@ -37,7 +37,7 @@
 					<% unless current_page?(cafs_path) %>
 							<li><%= link_to "Cafeteria Solutions", cafs_path %></li>
 					<% end %>
-					<% unless current_page?(contact_path) %>
+					<% unless current_page?(contact_path) || current_page?(root_path) %>
 							<li><%= link_to "Contact", contact_path %></li>
 					<% end %>
           </ul>

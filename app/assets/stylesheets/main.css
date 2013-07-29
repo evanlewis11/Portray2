@@ -78,7 +78,7 @@ body {
 
 
 .right-footer-block {
-	 padding-top:70px;
+	 padding-top:40px;
 	 text-align:right;
 }
 
@@ -115,7 +115,6 @@ width:800px;
 background-color:#efefef;
 box-shadow:0 0 1000px rgba(0,0,0,0.9);
 }
-
  
 #close2 {
 		background: url('/assets/close-contact.png') no-repeat scroll 0 0 transparent;
